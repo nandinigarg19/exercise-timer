@@ -1,0 +1,238 @@
+body
+{
+    display: flex;
+    margin: 0;
+}
+
+@keyframes bg-fade
+{
+    0% {
+        background-image: url('../images/back_1.jpg'), url('../images/back_2.jpg'); 
+        /* Next image is loaded so that animation is smoother and does not flicker due to server load error */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    25% {
+        background: url('../images/back_2.jpg'), url('../images/back_3.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    50% {background: url('../images/back_3.jpg'), url('../images/back_4.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    75% {
+        background: url('../images/back_4.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    100% {
+        background-image: url('../images/back_1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;   
+    }
+}
+
+div.bg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    animation-name: bg-fade;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+    z-index: -100;
+}
+
+div.inner-bg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(top, #b224ef, #7579ff);
+    opacity: 0.75;
+    width: 100vw;
+    height: 100vh;
+    z-index: -50;
+}
+
+div.content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+h3.title
+{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: 50px;
+    color: #fff;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+div.timer-clock
+{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px 10px 20px;
+}
+
+div.timer-clock div.timer-part
+{ 
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+div.timer-clock > div.timer-part > div
+{
+    width: 90px;
+    height: 120px;
+    margin: 10px;
+}
+
+div.timer-clock span
+{
+    background-color: black;
+    border-radius: 20%;
+    width: inherit;
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    font-family: 'Quantico', sans-serif;
+    font-weight: unset;
+    
+}
+
+div.hours
+{
+    display: block;
+    float: unset;
+    position: relative;
+    float: left;
+}
+div.dots
+{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+div.dots div
+{
+    width: 10px;
+    height: 10px;
+    background: black;
+    margin: 10px 30px 10px 30px;
+}
+
+div.row-display
+{
+    display: flex;
+    flex-direction: row;
+}
+
+div.interval-input, div.interval-input-part
+{
+    margin: 10px 30px 10px 10px;
+}
+
+div.break-input, div.break-input-part
+{
+    margin: 10px 10px 10px 30px;
+}
+
+div.interval-input-part div, div.break-input-part div
+{
+    margin: 10px 5px 10px 0px;
+}
+
+div.timer-label div, button.main-button
+{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+
+}
+
+div.timer-input input
+{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+button.main-button
+{
+    background: transparent;
+    border-radius: 50%;
+    height: 50px;
+    width: 155px;
+    padding-left: 12px;
+    outline: none;
+}
+
+div.social-links
+{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+a.social-link
+{
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a.social-link-dim
+{
+    width: 36px;
+    height: 36px;
+}
+a.social-link:hover
+{
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Exercise Timer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="icon" type="image/png" href="https://colorlib.com/etc/cs/comingsoon_15/images/icons/favicon.ico"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="./Coming Soon 15_files/bootstrap.min.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="./Coming Soon 15_files/font-awesome.min.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="./Coming Soon 15_files/animate.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="./Coming Soon 15_files/select2.min.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="./Coming Soon 15_files/flipclock.css"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="./Coming Soon 15_files/util.css"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico&display=swap">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        
+	</head>
+	<body>
+        <div class="bg"></div>
+        <div class="inner-bg"></div>
+        <div class="content">
+            <div class="timer">	
+                <h3 class="title">
+                    Exercise Timer
+                </h3>
+                <div class="timer-clock">
+                    <div class="timer-part timer-hour">
+                        <div class="timer-hour-1">
+                            <span class="timer-digit" id="th1">0</span>
+                        </div>
+                        <div class="timer-hour-2">
+                            <span class="timer-digit" id="th2">0</span>
+                        </div>
+                    </div>
+                    <div class="dots">
+                        <div class="dot1"></div>
+                        <div class="dot1"></div>
+                    </div>
+
+                    <div class="timer-part timer-minute">
+                        <div class="timer-minute-1">
+                            <span class="timer-digit" id="tm1">0</span>
+                        </div>
+                        <div class="timer-minute-2">
+                            <span class="timer-digit" id="tm2">0</span>
+                        </div>
+                    </div>
+                    <div class="dots">
+                        <div class="dot1"></div>
+                        <div class="dot1"></div>
+                    </div>
+
+                    <div class="timer-part timer-second">
+                        <div class="timer-second-1">
+                            <span class="timer-digit" id="ts1">0</span>
+                        </div>
+                        <div class="timer-second-2">
+                            <span class="timer-digit" id="ts2">0</span>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!-- <div>
+                <button class="on-click-btn">Click Me</button>
+            </div> -->
+            <br>
+            <br>
+            <br>
+
+            <div class="row-display timer-input">
+                <div class="timer-label">
+                    <div>Interval</div>
+                    <div class="row-display interval-input">
+                        <div class="row-display interval-input-part input-hour">
+                            <div class="input-hour-1">
+                                <input type="text" name="iih1" id="iih1" placeholder="0">
+                            </div>
+                            <div class="input-hour-2">
+                                <input type="text" name="iih2" id="iih2" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="row-display interval-input-part input-minute">
+                            <div class="input-minute-1">
+                                <input type="text" name="iim1" id="iim1" placeholder="0">
+                            </div>
+                            <div class="input-minute-2">
+                                <input type="text" name="iim2" id="iim2" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="row-display interval-input-part input-second">
+                            <div class="input-second-1">
+                                <input type="text" name="iis1" id="iis1" placeholder="0">
+                            </div>
+                            <div class="input-second-2">
+                                <input type="text" name="iis2" id="iis2" placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div><button class="main-button start-button">Start</button></div>
+                </div>
+                <div class="timer-label">
+                    <div>Break</div>
+                    <div class="row-display break-input">
+                        <div class="row-display break-input-part input-hour">
+                            <div class="input-hour-1">
+                                <input type="text" name="ibh1" id="ibh1" placeholder="0">
+                            </div>
+                            <div class="input-hour-2">
+                                <input type="text" name="ibh2" id="ibh2" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="row-display break-input-part input-minute">
+                            <div class="input-minute-1">
+                                <input type="text" name="ibm1" id="ibm1" placeholder="0">
+                            </div>
+                            <div class="input-minute-2">
+                                <input type="text" name="ibm2" id="ibm2" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="row-display break-input-part input-second">
+                            <div class="input-second-1">
+                                <input type="text" name="ibs1" id="ibs1" placeholder="0">
+                            </div>
+                            <div class="input-second-2">
+                                <input type="text" name="ibs2" id="ibs2" placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div><button class="main-button reset-button">Reset</button></div>
+                    
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-link social-link-dim">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="social-link social-link-dim">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link social-link-dim">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="index.js"></script>
+	</body>
+</html>
